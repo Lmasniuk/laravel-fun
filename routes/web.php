@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ViewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/swag', function () {
-    return view('welcome');
-});
+// Route::get('/orders', function () {
+//     return view('orders.orders');
+// });
+
+
+Route::get('/orders', [ViewController::class, 'index']);
+
 
