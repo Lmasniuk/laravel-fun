@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/orders', [OrderController::class, 'getAllOrders']);
+Route::get('/orders', [OrderController::class, 'getAllOrders'])->name('getOrders');
 
 Route::get('/orders/{id}', [OrderController::class, 'getOrderById']);
 
